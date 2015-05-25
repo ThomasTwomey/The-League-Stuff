@@ -9,9 +9,13 @@ public class SlotMachine
 		new SlotMachine();
 	}
 	public SlotMachine(){
-		int num1 = new Random().nextInt(100);
-		int num2 = new Random().nextInt(100);
-		int num3 = new Random().nextInt(100);
-		JOptionPane.showMessageDialog(null, "The numbers are " + num1 + " " + num2 + " " + num3);
+		int numSet1 = new Random().nextInt(3);
+		int numSet2 = new Random().nextInt(3);
+		JOptionPane.showMessageDialog(null, "The numbers are " + numSet1 + " " + numSet2);
+		
+		if(numSet1 == numSet2)
+		{
+			JOptionPane.showMessageDialog(null, "Ding Ding Ding Ding");
+		}
 	}
 }

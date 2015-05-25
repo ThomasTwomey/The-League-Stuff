@@ -1,0 +1,11 @@
+import java.util.Random;
+
+public class RandomNumbers
+{
+	public static void main(String[] args)
+	{
+		int x = new Random().nextInt(50);
+		
+		System.out.println(x);
+	}
+}

@@ -1,0 +1,19 @@
+
+public class Fibonachi
+{
+	public static void main(String[] args)
+	{
+		int p = 1;
+		int q = 0;
+		System.out.println(q);
+		System.out.println(p);
+		
+		for(int i = 3; i < 10; i++)
+		{
+			int f = p + q;
+			System.out.println(f);
+			q = p;
+			p = f;
+		}
+	}
+}
