@@ -1,0 +1,22 @@
+// Copyright Wintriss Technical Schools 2013
+import javax.swing.JOptionPane;
+
+public class GuessThatAnimal {
+
+	public static void main(String[] args) {
+		
+		int FourLegs = JOptionPane.showConfirmDialog(null, "Does the animal have 4 legs");
+		
+		if(FourLegs == JOptionPane.YES_OPTION)
+		{
+			
+		}
+		
+		if(FourLegs == JOptionPane.NO_OPTION)
+		{
+			
+		}
+		
+	}
+}
+
