@@ -22,43 +22,43 @@ void draw()
   int pup2X = mouseX;
   int pup2Y = mouseY;
   
-  if(pup1X >= 140)
+  if(pup1X > 140)
   {
       pup1X = 140;
   }
   
-  if(pup1X <= 100)
+  if(pup1X < 100)
   {
       pup1X = 100;
   }
   
-  if(pup1Y >= 224)
+  if(pup1Y > 224)
   {
       pup1Y = 224;
   }
   
-  if(pup1Y <= 184)
+  if(pup1Y < 184)
   {
       pup1Y = 184;
   }
   
   //pup 2
-  if(pup2X >= 340)
+  if(pup2X > 340)
   {
-      pup2X = 140;
+      pup2X = 340;
   }
   
-  if(pup2X <= 300)
+  if(pup2X < 300)
   {
-      pup2X = 100;
+      pup2X = 300;
   }
   
-  if(pup2Y >= 224)
+  if(pup2Y > 224)
   {
       pup2Y = 224;
   }
   
-  if(pup2Y <= 184)
+  if(pup2Y < 184)
   {
       pup2Y = 184;
   }
