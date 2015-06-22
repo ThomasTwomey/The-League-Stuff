@@ -1,0 +1,13 @@
+import java.util.Random;
+import javax.swing.JOptionPane;
+
+public class BlackJack
+{
+	public static void main(String[] args)
+	{
+		int randCard = new Random().nextInt(9) + 1;
+		
+		JOptionPane.showMessageDialog(null, randCard);
+		
+	}
+}

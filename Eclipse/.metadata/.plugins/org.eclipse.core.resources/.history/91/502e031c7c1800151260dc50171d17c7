@@ -1,0 +1,34 @@
+import java.util.Random;
+import javax.swing.JOptionPane;
+
+public class BlackJack
+{
+	public static void main(String[] args)
+	{
+		int randCard = randCard();
+		
+		//JOptionPane.showMessageDialog(null, "The card is: " + randCard);
+		System.out.println("The card is: " + randCard);
+		
+		int userResponse = JOptionPane.showConfirmDialog(null, "Do you want to hit?", "", JOptionPane.YES_NO_OPTION);
+		
+		if(userResponse == JOptionPane.YES_OPTION)
+		{
+			int newCard = randCard();
+			
+			newCard += randCard;
+		}
+		
+		else
+		{
+			
+		}
+		
+	}
+	
+	public static int randCard()
+	{
+		int randCard = new Random().nextInt(9) + 1;
+		return randCard;
+	}
+}
