@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.teachingextensions.logo.Turtle.Animals"/>
-<fullyQualifiedTypeName name="org.teachingextensions.logo.Colors"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="org.teachingextensions.logo.Colors"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="org.teachingextensions.logo.Colors.Blues"/>
 </qualifiedTypeNameHistroy>
