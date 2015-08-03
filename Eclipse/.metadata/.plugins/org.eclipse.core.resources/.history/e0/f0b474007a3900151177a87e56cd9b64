@@ -1,0 +1,15 @@
+
+public class GuiIntro
+{
+	public static void main(String[] args)
+	{
+		GuiIntro g = new GuiIntro();
+		
+	}
+	
+	public GuiIntro()
+	{
+		System.out.println("Deditated Wam");
+	}
+	
+}

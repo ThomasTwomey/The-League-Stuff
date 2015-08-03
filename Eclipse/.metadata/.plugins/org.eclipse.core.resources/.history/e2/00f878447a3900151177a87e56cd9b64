@@ -1,0 +1,22 @@
+import javax.swing.JFrame;
+
+public class GuiIntro
+{
+	JFrame window;
+	
+	
+	public static void main(String[] args)
+	{
+		GuiIntro g = new GuiIntro();
+		
+	}
+	
+	public GuiIntro()
+	{
+		window = new JFrame();
+		window.setVisible(true);
+		window.setSize(400, 500);
+		window.setTitle("Deditated Wam");
+	}
+	
+}

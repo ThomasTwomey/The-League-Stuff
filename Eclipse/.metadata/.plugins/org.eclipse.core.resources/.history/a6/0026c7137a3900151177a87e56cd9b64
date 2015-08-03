@@ -1,0 +1,19 @@
+import javax.swing.JFrame;
+
+public class GuiIntro
+{
+	JFrame window;
+	
+	
+	public static void main(String[] args)
+	{
+		GuiIntro g = new GuiIntro();
+		
+	}
+	
+	public GuiIntro()
+	{
+		window = new JFrame();
+	}
+	
+}

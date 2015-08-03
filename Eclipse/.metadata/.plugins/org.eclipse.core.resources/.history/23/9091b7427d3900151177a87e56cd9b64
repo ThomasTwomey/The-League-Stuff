@@ -1,0 +1,31 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GuiIntro
+{
+	JFrame window;
+	JPanel panel;
+	JButton button;
+	
+	
+	public static void main(String[] args)
+	{
+		GuiIntro g = new GuiIntro();
+		
+	}
+	
+	public GuiIntro()
+	{
+		window = new JFrame();
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setSize(500, 400);
+		window.setTitle("Deditated Wam");
+		
+		panel = new JPanel();
+		button = new JButton();
+		
+	}
+	
+}

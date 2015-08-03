@@ -1,0 +1,38 @@
+package SimpleCalculator;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class SimpleCalculator
+{
+	JFrame window;
+	JPanel panel;
+	
+	
+	public static void main(String[] args)
+	{
+		SimpleCalculator g = new SimpleCalculator();
+		
+	}
+	
+	public SimpleCalculator()
+	{
+		// Window
+		window = new JFrame();
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.add(panel);
+		
+		window.setTitle("Simple Calculator");
+		
+		// Panel
+		panel = new JPanel();
+		
+		
+		window.pack();
+		
+		window.setSize(500, 400);
+		
+	}
+	
+}

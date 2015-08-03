@@ -1,0 +1,29 @@
+package SimpleCalculator;
+
+import javax.swing.JFrame;
+
+public class SimpleCalculator
+{
+	JFrame window;
+	
+	
+	public static void main(String[] args)
+	{
+		SimpleCalculator g = new SimpleCalculator();
+		
+	}
+	
+	public SimpleCalculator()
+	{
+		window = new JFrame();
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		//window.pack();
+		
+		window.setSize(500, 400);
+		
+	}
+	
+}
