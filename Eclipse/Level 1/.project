@@ -14,4 +14,36 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/DrumKit/drum.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Pictures/drum.jpg</locationURI>
+		</link>
+		<link>
+			<name>src/DrumKit/drum.wav</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Sound/drum.wav</locationURI>
+		</link>
+		<link>
+			<name>src/DrumKit/superKai.png</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Pictures/superKai.png</locationURI>
+		</link>
+		<link>
+			<name>src/DrumKit/superKaiGif.gif</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Pictures/superKaiGif.gif</locationURI>
+		</link>
+		<link>
+			<name>src/DrumKit/wam.wav</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Sound/wam.wav</locationURI>
+		</link>
+		<link>
+			<name>src/DrumKit/wamDubstep.wav</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Sound/wamDubstep.wav</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

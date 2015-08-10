@@ -1,0 +1,11 @@
+package DrumKit;
+
+public class DrumKit
+{
+	
+	public static void main(String[] args)
+	{
+		
+		
+	}
+}
