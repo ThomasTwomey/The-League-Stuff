@@ -16,7 +16,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class DrumKit extends MouseAdapter {
+public class DrumKit extends MouseAdapter
+{
 
 	JLabel drumLabelWithImage;
 	JLabel superKai;
@@ -24,11 +25,13 @@ public class DrumKit extends MouseAdapter {
 	JFrame window;
 	JPanel panel;
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception
+	{
 		new DrumKit().getGoing();
 	}
 
-	private void getGoing() throws MalformedURLException {
+	private void getGoing() throws MalformedURLException
+	{
 		// 1. Make a JFrame variable and initialize it using "new JFrame()"
 
 		window = new JFrame();
@@ -88,17 +91,21 @@ public class DrumKit extends MouseAdapter {
 
 	}
 
-	public void mouseClicked(MouseEvent e) {
+	public void mouseClicked(MouseEvent e)
+	{
 		// 14. When the mouse is clicked, print "mouse clicked"
-		if (e.getSource() == this.drumLabelWithImage) {
+		if (e.getSource() == this.drumLabelWithImage)
+		{
 			playSound("drum.wav");
 		}
 
-		else if (e.getSource() == this.superKaiGif) {
+		else if (e.getSource() == this.superKaiGif)
+		{
 			playSound("wam.wav");
 		}
 
-		else if (e.getSource() == this.superKai) {
+		else if (e.getSource() == this.superKai)
+		{
 			playSound("wamDubstep.wav");
 		}
 
@@ -115,9 +122,11 @@ public class DrumKit extends MouseAdapter {
 	}
 
 	private JLabel createLabelImage(String fileName)
-			throws MalformedURLException {
+			throws MalformedURLException
+	{
 		URL imageURL = getClass().getResource(fileName);
-		if (imageURL == null) {
+		if (imageURL == null)
+		{
 			System.err.println("Could not find image " + fileName);
 			return new JLabel();
 		}
@@ -126,7 +135,8 @@ public class DrumKit extends MouseAdapter {
 		return imageLabel;
 	}
 
-	private void playSound(String fileName) {
+	private void playSound(String fileName)
+	{
 		AudioClip sound = JApplet
 				.newAudioClip(getClass().getResource(fileName));
 		sound.play();

@@ -1,0 +1,55 @@
+package JLabelsAndFonts;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class JLabelsAndFonts
+{
+	JFrame frame;
+	JPanel panel;
+	JLabel label;
+	Font myFont;
+	JButton up;
+	JButton down;
+	JButton color;
+	JButton exit;
+
+	public static void main(String[] args)
+	{
+		JLabelsAndFonts g = new JLabelsAndFonts();
+	}
+
+	public JLabelsAndFonts()
+	{
+		frame = new JFrame();
+		panel = new JPanel();
+		up = new JButton();
+		down = new JButton();
+		color = new JButton();
+		exit = new JButton();
+
+		label = new JLabel("Kappa 123");
+		myFont = new Font("Arial", Font.PLAIN, 69);
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("JLabels and Fonts");
+
+		frame.add(panel);
+		panel.add(label);
+		panel.add(up);
+		panel.add(down);
+		panel.add(color);
+		panel.add(exit);
+
+		label.setFont(myFont);
+		label.setForeground(Color.BLUE);
+
+		frame.setSize(500, 350);
+	}
+}
