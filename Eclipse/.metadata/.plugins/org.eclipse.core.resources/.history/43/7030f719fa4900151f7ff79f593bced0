@@ -1,0 +1,11 @@
+package Robot;
+
+import org.jointheleague.graphical.robot.*;
+
+public class Robot
+{
+	public static void main(String[] args)
+	{
+		Robot tommy = new Robot();
+	}
+}
