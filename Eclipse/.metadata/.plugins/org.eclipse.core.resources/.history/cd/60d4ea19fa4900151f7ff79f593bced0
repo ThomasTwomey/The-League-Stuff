@@ -1,9 +1,0 @@
-package Robot;
-
-public class Robot
-{
-	public static void main(String[] args)
-	{
-		Robot dave = new Robot();
-	}
-}
