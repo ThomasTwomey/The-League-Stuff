@@ -76,8 +76,15 @@ public class BinaryConverter implements ActionListener, FocusListener
 	{
 		if (e.getSource() == convert)
 		{
-			System.out.println("Test");
-			decimal1.setText(decimalToBinary(decimal1.getText()) + "");
+			if (decimal1.getText().contains(
+					"[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+"))
+				decimal1.setText("0");
+			if (binary2.getText().contains(
+					"[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+"))
+				binary2.setText("0");
+
+			binary1.setText(decimalToBinary(decimal1.getText()));
+			decimal2.setText(binaryToDecimal(binary2.getText()));
 		}
 
 	}
@@ -88,40 +95,90 @@ public class BinaryConverter implements ActionListener, FocusListener
 				.contains("[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]+"))
 		{
 
-			return "Please Enter a Decimal Number";
+			return "Please Enter a Decimal Number:";
 		}
 
 		else
 		{
-			int calc = Integer.parseInt(input);
-			// TODO decimal to binary method
+			int toBinary = Integer.parseInt(input);
+			String result = "";
 
-			return "number";
+			if (toBinary == 0)
+				result = "0";
+
+			while (toBinary > 0)
+			{
+				int rem = toBinary % 2;
+				result = rem + result;
+				toBinary /= 2;
+			}
+
+			return result;
 		}
 	}
 
 	public String binaryToDecimal(String input)
 	{
-		return "";
+		double result = 0;
+
+		if (input
+				.contains("[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ23456789]+"))
+		{
+			return "0";
+		}
+
+		for (int i = 0; i < input.length(); i++)
+		{
+			if (input.charAt(i) == '1')
+				result = result + Math.pow(2, input.length() - 1 - i);
+		}
+
+		int intResult = (int) result;
+
+		return Integer.toString(intResult);
 	}
+
+	String decimalTemp;
+	String binaryTemp;
 
 	@Override
 	public void focusGained(FocusEvent a)
 	{
 		if (a.getSource() == decimal1)
+		{
+			decimalTemp = decimal1.getText();
 			decimal1.setText("");
+		}
 
-		if (a.getSource() == binary2)
+		else if (a.getSource() == binary2)
+		{
+			binaryTemp = binary2.getText();
 			binary2.setText("");
+		}
 	}
 
 	@Override
 	public void focusLost(FocusEvent a)
 	{
-		/*
-		 * if (a.getSource() == decimal1) decimal1.setText("stuff");
-		 * 
-		 * if (a.getSource() == decimal1) binary2.setText("stuff");
-		 */
+		if (a.getSource() == decimal1)
+		{
+			decimalTemp = decimal1.getText();
+			if (decimalTemp.equals(""))
+			{
+				decimalTemp = "Enter a decimal number:";
+			}
+			decimal1.setText(decimalTemp);
+		}
+
+		else if (a.getSource() == binary2)
+		{
+			binaryTemp = binary2.getText();
+			if (binaryTemp.equals(""))
+			{
+				binaryTemp = "Enter a binary number:";
+			}
+			binary2.setText(binaryTemp);
+		}
+
 	}
 }
