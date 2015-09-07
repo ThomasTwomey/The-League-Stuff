@@ -1,0 +1,75 @@
+package BinaryConverter;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class BinaryConverter implements ActionListener
+{
+	JFrame frame;
+	JPanel panel;
+	JButton convert;
+	JLabel decimalToBinary;
+	JLabel binaryToDecimal;
+	JTextField binary1;
+	JTextField decimal1;
+	JTextField binary2;
+	JTextField decimal2;
+
+	public static void main(String[] args)
+	{
+		BinaryConverter b = new BinaryConverter();
+	}
+
+	public BinaryConverter()
+	{
+		frame = new JFrame();
+		panel = new JPanel();
+		convert = new JButton("Convert");
+		decimalToBinary = new JLabel("Decimal to Binary");
+		binaryToDecimal = new JLabel("Binary to Decimal");
+		binary1 = new JTextField();
+		decimal1 = new JTextField("Enter a decimal number:");
+		decimal2 = new JTextField();
+		binary2 = new JTextField("Enter a binary number:");
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+
+		frame.add(panel);
+
+		panel.setLayout(null);
+
+		panel.add(convert);
+		panel.add(binaryToDecimal);
+		panel.add(decimalToBinary);
+		panel.add(binary1);
+		panel.add(decimal1);
+		panel.add(binary2);
+		panel.add(decimal2);
+
+		convert.setBounds(50, 50, 100, 100);
+		decimalToBinary.setBounds(50, 200, 200, 100);
+		binaryToDecimal.setBounds(50, 350, 200, 100);
+		binary1.setBounds(200, 235, 150, 40);
+
+		convert.addActionListener(this);
+
+		frame.setSize(800, 600);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getSource() == convert)
+		{
+			System.out.println("Test");
+		}
+
+	}
+}
