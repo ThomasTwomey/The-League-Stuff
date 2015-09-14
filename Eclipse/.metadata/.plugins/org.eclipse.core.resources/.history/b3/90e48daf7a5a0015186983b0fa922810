@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane;
+
+public class StringFun
+{
+
+	public static void main(String[] args)
+	{
+		String name = JOptionPane.showInputDialog("Enter your name:");
+		JOptionPane.showMessageDialog(null, flipString(name));
+
+	}
+
+	public static String flipString(String string)
+	{
+		String flipped = "";
+		
+		for (int i = string.length(); i >= 0; i--)
+		{
+			char current = string.charAt(i);
+			flipped = "" + current;
+		}
+
+		return flipped;
+	}
+
+}

@@ -1,0 +1,14 @@
+package MumboJumboConverter;
+
+public class MumboJumboConverter
+{
+	public static void main(String[] args)
+	{
+		MumboJumboConverter a = new MumboJumboConverter();
+	}
+	
+	public MumboJumboConverter()
+	{
+		
+	}
+}
