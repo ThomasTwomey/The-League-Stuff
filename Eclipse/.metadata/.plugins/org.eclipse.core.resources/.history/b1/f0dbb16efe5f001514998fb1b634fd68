@@ -1,0 +1,46 @@
+package ReadFromFile;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFromFile
+{
+	public static void main(String[] args)
+	{
+		ReadFromFile a = new ReadFromFile();
+	}
+
+	public ReadFromFile()
+	{
+		try
+		{
+			BufferedReader br = new BufferedReader(new FileReader("9text.txt"));
+
+			try
+			{
+				System.out.println(br.readLine());
+			} catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+
+		/*
+		 * try { FileReader fr = new FileReader("text.txt");
+		 * 
+		 * int temp = 0;
+		 * 
+		 * while (temp != -1) { temp = fr.read(); char charTemp = (char) temp;
+		 * if (temp == -1) return;
+		 * 
+		 * System.out.print(charTemp); }
+		 * 
+		 * } catch (Exception e) { e.printStackTrace(); }
+		 */
+	}
+}

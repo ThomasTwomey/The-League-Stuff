@@ -1,0 +1,30 @@
+package Spamalot;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Spamalot
+{
+	JFrame frame;
+	JPanel panel;
+	JButton good;
+	JButton bad;
+
+	public static void main(String[] args)
+	{
+		Spamalot a = new Spamalot();
+	}
+
+	public Spamalot()
+	{
+		frame = new JFrame();
+		panel = new JPanel();
+		good = new JButton();
+		bad = new JButton();
+
+		frame.setVisible(true);
+
+		frame.setSize(350, 70);
+	}
+}

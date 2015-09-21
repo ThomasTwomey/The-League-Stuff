@@ -1,0 +1,45 @@
+package Spamalot;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Spamalot
+{
+	JFrame frame;
+	JPanel panel;
+	JTextField text;
+	JButton good;
+	JButton bad;
+
+	public static void main(String[] args)
+	{
+		Spamalot a = new Spamalot();
+	}
+
+	public Spamalot()
+	{
+		frame = new JFrame();
+		panel = new JPanel();
+		text = new JTextField("Phone Number/Email");
+		good = new JButton();
+		bad = new JButton();
+
+		frame.setVisible(true);
+		frame.add(panel);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		panel.setLayout(null);
+
+		panel.add(text);
+		panel.add(good);
+		panel.add(bad);
+
+		text.setBounds(0, 0, 250, 50);
+		good.setBounds(270, 0, 50, 50);
+		bad.setBounds(350, 0, 50, 50);
+
+		frame.setSize(450, 60);
+	}
+}

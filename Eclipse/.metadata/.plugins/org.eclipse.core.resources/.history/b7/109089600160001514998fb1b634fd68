@@ -1,0 +1,14 @@
+package Spamalot;
+
+public class Spamalot
+{
+	public static void main(String[] args)
+	{
+		Spamalot a = new Spamalot();
+	}
+
+	public Spamalot()
+	{
+
+	}
+}
