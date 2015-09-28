@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="E:/Github/The-League-Stuff/Jars/mail.jar"/>
-	<classpathentry kind="lib" path="E:/Github/The-League-Stuff/Jars/robot.jar"/>
+	<classpathentry kind="lib" path="/Users/Guest/Desktop/The-League-Stuff/Jars/mail.jar"/>
+	<classpathentry kind="lib" path="/Users/Guest/Desktop/The-League-Stuff/Jars/robot.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

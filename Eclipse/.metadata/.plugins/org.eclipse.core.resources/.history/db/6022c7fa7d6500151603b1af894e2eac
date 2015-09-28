@@ -1,0 +1,27 @@
+package TypingTutor;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TypingTutor
+{
+	JFrame frame;
+	JPanel panel;
+
+	public static void main(String[] args)
+	{
+		TypingTutor a = new TypingTutor();
+	}
+
+	public TypingTutor()
+	{
+		frame = new JFrame("Type or Die");
+		panel = new JPanel();
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.setSize(400, 300);
+	}
+
+}

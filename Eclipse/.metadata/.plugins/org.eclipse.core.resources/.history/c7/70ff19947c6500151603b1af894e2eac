@@ -1,0 +1,15 @@
+
+public class Test
+{
+	Leg leftLeg;
+
+	public Leg getLeftLeg()
+	{
+		return leftLeg;
+	}
+
+	public void setLeftLeg(Leg leftLeg)
+	{
+		this.leftLeg = leftLeg;
+	}
+}

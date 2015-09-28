@@ -1,0 +1,50 @@
+package TypingTutor;
+
+import java.util.Random;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class TypingTutor
+{
+	JFrame frame;
+	JPanel panel;
+	JLabel label;
+
+	public static void main(String[] args)
+	{
+		TypingTutor a = new TypingTutor();
+	}
+
+	public TypingTutor()
+	{
+		String totalChar = "";
+		frame = new JFrame("Type or Die");
+		panel = new JPanel();
+		label = new JLabel();
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.add(panel);
+
+		panel.add(label);
+
+		for (int i = 0; i < 30; i++)
+		{
+			totalChar = totalChar + generateRandomLetter();
+		}
+		
+		label.setText(totalChar);
+
+		frame.setSize(400, 300);
+	}
+
+	char generateRandomLetter()
+	{
+		Random r = new Random();
+		return (char) (r.nextInt(26) + 'a');
+	}
+
+}
