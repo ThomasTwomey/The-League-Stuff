@@ -1,0 +1,136 @@
+package SlotMachine;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class SlotMachine implements ActionListener
+{
+	JFrame frame;
+	JPanel panel;
+	JButton roll;
+	JLabel slot1;
+	JLabel slot2;
+	JLabel slot3;
+	JLabel result;
+	JLabel total;
+	JLabel betTxt;
+	JTextField bet;
+
+	int totalBet = 1000;
+
+	public static void main(String[] args)
+	{
+		SlotMachine a = new SlotMachine();
+	}
+
+	public SlotMachine()
+	{
+		frame = new JFrame("Slot Machine");
+		panel = new JPanel();
+		roll = new JButton("Roll");
+		slot1 = new JLabel("1");
+		slot2 = new JLabel("1");
+		slot3 = new JLabel("1");
+		result = new JLabel("Result");
+		total = new JLabel("Total: " + totalBet);
+		betTxt = new JLabel("Bet");
+		bet = new JTextField();
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.add(panel);
+
+		panel.setLayout(null);
+
+		panel.add(roll);
+		panel.add(slot1);
+		panel.add(slot2);
+		panel.add(slot3);
+		panel.add(result);
+		panel.add(total);
+		panel.add(betTxt);
+		panel.add(bet);
+
+		roll.addActionListener(this);
+
+		slot1.setFont(slot1.getFont().deriveFont(30.0f));
+		slot1.setHorizontalAlignment(JLabel.CENTER);
+		slot2.setFont(slot2.getFont().deriveFont(30.0f));
+		slot2.setHorizontalAlignment(JLabel.CENTER);
+		slot3.setFont(slot3.getFont().deriveFont(30.0f));
+		slot3.setHorizontalAlignment(JLabel.CENTER);
+		result.setFont(result.getFont().deriveFont(25.0f));
+		result.setHorizontalAlignment(JLabel.CENTER);
+
+		roll.setBounds(110, 80, 75, 50);
+		slot1.setBounds(25, 220, 50, 50);
+		slot2.setBounds(125, 220, 50, 50);
+		slot3.setBounds(225, 220, 50, 50);
+		result.setBounds(90, 150, 125, 50);
+		total.setBounds(20, 5, 100, 40);
+		betTxt.setBounds(20, 30, 30, 50);
+		bet.setBounds(45, 40, 100, 30);
+
+		frame.setSize(300, 320);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+
+		if (e.getSource() == roll)
+		{
+
+			result.setText("Result");
+
+			slot1.setText(Integer.toString(returnRand(3)));
+			slot2.setText(Integer.toString(returnRand(3)));
+			slot3.setText(Integer.toString(returnRand(3)));
+
+			if (Integer.parseInt(slot1.getText()) == Integer.parseInt(slot2
+					.getText())
+					&& Integer.parseInt(slot2.getText()) == Integer
+							.parseInt(slot3.getText()))
+			{
+				if (!(bet.getText().equals("")))
+				{
+					totalBet = totalBet
+							+ ((Integer.parseInt(bet.getText())) * 2);
+					total.setText("Total: " + totalBet);
+				}
+				result.setText("Win!");
+			} else
+			{
+				if (!(bet.getText().equals("")))
+				{
+					totalBet = totalBet - (Integer.parseInt(bet.getText()));
+					total.setText("Total: " + totalBet);
+				}
+				result.setText("Loss!");
+			}
+		}
+		
+		if (totalBet <= 0)
+		{
+			JOptionPane.showMessageDialog(null,
+					"Game Over! You are out of money!");
+		}
+
+	}
+
+	public int returnRand(int range)
+	{
+		int rand = new Random().nextInt(range);
+		return rand;
+	}
+
+}

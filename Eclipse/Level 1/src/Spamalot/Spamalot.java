@@ -132,7 +132,7 @@ public class Spamalot implements ActionListener, FocusListener
 
 		else if (e.getSource() == bad)
 		{
-			sendSpamAttack(4, text.getText(), "Subject", "Bad Content");
+			sendSpamAttack(20, text.getText(), "Subject", "Bad Content");
 		}
 	}
 
