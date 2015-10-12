@@ -1,0 +1,35 @@
+package PhotoBook;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class PhotoBook
+{
+	JFrame frame;
+	JPanel panel;
+	ImagePanel img;
+	ImagePanel[] imageArray;
+
+	public static void main(String[] args)
+	{
+		PhotoBook p = new PhotoBook();
+	}
+
+	public PhotoBook()
+	{
+		frame = new JFrame("Photo Book");
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		imageArray = new ImagePanel[5];
+
+		img = new ImagePanel("theAlmightyLoaf.png");
+
+		frame.add(img);
+
+		frame.setSize(img.imageWidth, img.imageHeight);
+	}
+}

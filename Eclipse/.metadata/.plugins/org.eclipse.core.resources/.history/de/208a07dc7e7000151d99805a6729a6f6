@@ -1,0 +1,23 @@
+package PhotoBook;
+
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+public class ImagePanel extends JPanel
+{
+	BufferedImage bi;
+
+	public ImagePanel(String filename)
+	{
+		try
+		{
+			bi = ImageIO.read(this.getClass().getResourceAsStream(filename));
+
+		} catch (Exception e)
+		{
+			System.err.println("Could not find or open file!");
+		}
+	}
+}
