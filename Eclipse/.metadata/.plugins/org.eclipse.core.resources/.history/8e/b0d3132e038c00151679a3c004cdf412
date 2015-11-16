@@ -1,0 +1,16 @@
+package WhackAMole;
+
+public class WhackAMole
+{
+
+	public static void main(String[] args)
+	{
+		new WhackAMole();
+	}
+
+	WhackAMole()
+	{
+
+	}
+
+}
