@@ -1,0 +1,32 @@
+package PracticeTest;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class PracticeTest
+{
+	JFrame frame;
+	JPanel panel;
+	JButton random;
+	JButton message;
+	JButton exit;
+
+	public static void main(String[] args)
+	{
+		new PracticeTest();
+	}
+
+	PracticeTest()
+	{
+		frame = new JFrame("Practice Test");
+		panel = new JPanel();
+		random = new JButton("Random");
+		message = new JButton("Message");
+		exit = new JButton("Exit");
+		
+		
+
+	}
+
+}
