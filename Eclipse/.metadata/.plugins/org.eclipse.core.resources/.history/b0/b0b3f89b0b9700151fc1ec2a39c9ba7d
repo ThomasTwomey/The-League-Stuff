@@ -1,0 +1,37 @@
+package NastySurprise;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class NastySurprise
+{
+	JFrame frame;
+	JPanel panel;
+	JButton trick;
+	JButton treat;
+
+	public static void main(String[] args)
+	{
+		new NastySurprise();
+	}
+
+	NastySurprise()
+	{
+		frame = new JFrame("Nasty Surprise");
+		panel = new JPanel();
+		trick = new JButton("Trick");
+		treat = new JButton("Treat");
+
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.add(panel);
+
+		panel.add(trick);
+		panel.add(treat);
+
+		frame.setSize(200, 100);
+	}
+
+}
