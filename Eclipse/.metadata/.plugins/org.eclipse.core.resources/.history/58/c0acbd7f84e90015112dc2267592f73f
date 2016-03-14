@@ -1,0 +1,16 @@
+package ArrayListPuzzles;
+
+public class ArrayListPuzzles {
+
+	public static void main(String[] args) {
+		ArrayListPuzzles p = new ArrayListPuzzles();
+	}
+
+	int x;
+
+	ArrayListPuzzles() {
+		System.out.print(x++ + " ");
+		new ArrayListPuzzles();
+	}
+
+}

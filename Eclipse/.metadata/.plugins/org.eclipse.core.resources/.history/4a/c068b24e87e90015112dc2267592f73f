@@ -1,0 +1,20 @@
+package ArrayListPuzzles;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class ArrayListPuzzles {
+
+	public static void main(String[] args) {
+		ArrayList<String> food = new ArrayList();
+		food.add("pie");
+		food.add("pizza");
+		food.add("pasta");
+		food.add("fish");
+
+		Random rand = new Random();
+		System.out.println("You will eat " + food.get(rand.nextInt(food.size()))
+				+ " for dinner.");
+	}
+
+}
