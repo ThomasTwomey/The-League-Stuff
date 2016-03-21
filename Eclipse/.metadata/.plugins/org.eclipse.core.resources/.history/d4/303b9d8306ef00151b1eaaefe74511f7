@@ -1,0 +1,82 @@
+package SnakesOnAPlane;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class SnakesOnAPlane {
+
+	public static void main(String[] args) {
+		Plane p = new Plane();
+		double probOfDeath;
+		int numVenomness = 0;
+		int viciousness = 0;
+		for (Snake s : p.snakes) {
+			if (s.getVenomous() == true)
+				numVenomness++;
+			viciousness += s.getViciousness();
+		}
+		System.out.println(numVenomness);
+		probOfDeath = (numVenomness * viciousness) / p.getNumOfPassengers();
+		System.out.println("The probability of death is " + probOfDeath);
+	}
+
+}
+
+class Randomness {
+	boolean tofRand() {
+		int rand = new Random().nextInt(1);
+		boolean tof;
+		if (rand == 0)
+			tof = false;
+		else
+			tof = true;
+		return tof;
+	}
+
+	int numRand() {
+		int rand = new Random().nextInt(9) + 1;
+		return rand;
+	}
+}
+
+class Snake {
+	int viciousness;
+	boolean venomous;
+
+	Snake() {
+		Randomness r = new Randomness();
+		viciousness = r.numRand();
+		venomous = r.tofRand();
+	}
+
+	public int getViciousness() {
+		return viciousness;
+	}
+
+	public boolean getVenomous() {
+		return venomous;
+	}
+
+	Snake(int i) {
+		this.viciousness = i;
+	}
+	Snake(boolean b) {
+		this.venomous = b;
+	}
+
+}
+
+class Plane {
+	private int numberOfPassengers = 50;
+	ArrayList<Snake> snakes = new ArrayList<Snake>();
+
+	Plane() {
+		for (int i = 0; i < 100; i++) {
+			snakes.add(new Snake());
+		}
+	}
+
+	public int getNumOfPassengers() {
+		return numberOfPassengers;
+	}
+}
