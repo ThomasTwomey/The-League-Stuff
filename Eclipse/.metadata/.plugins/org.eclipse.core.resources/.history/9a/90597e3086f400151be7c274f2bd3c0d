@@ -1,0 +1,25 @@
+package ListIterationMaster;
+
+import java.util.ArrayList;
+
+public class ListIterationMaster {
+
+	public static void main(String[] args) {
+		new SongLibrary();
+	}
+
+}
+
+class Song {
+	private double duration;
+
+	Song(double duration) {
+		this.duration = duration;
+	}
+}
+
+class SongLibrary {
+	SongLibrary() {
+		ArrayList cd = new ArrayList<Song>();
+	}
+}

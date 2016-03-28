@@ -1,0 +1,39 @@
+package StudentIntelligence;
+
+import java.util.ArrayList;
+
+public class StudentIntelligence {
+	public static void main(String args[]) {
+		new Classroom(30);
+	}
+}
+
+class Student {
+	int intelligence;
+	String name;
+
+	Student(int intelligence, String name) {
+		this.intelligence = intelligence;
+		this.name = name;
+	}
+
+	public int getIntelligence() {
+		return intelligence;
+	}
+	public String getName() {
+		return name;
+	}
+}
+
+class Classroom {
+	int size;
+	
+	Classroom(int size){
+		this.size = size;
+	}
+	ArrayList<Student> classRm = new ArrayList();
+	
+	for(int i = 0; i < size; i++){
+		
+	}
+}
