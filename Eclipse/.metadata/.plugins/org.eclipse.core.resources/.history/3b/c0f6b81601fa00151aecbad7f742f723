@@ -1,0 +1,17 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class unitTest {
+
+	@Test
+	public void test() {
+		// fail("Not yet implemented");
+		assertEquals(2, addInt(1, 1));
+	}
+
+	public int addInt(int x, int y) {
+		return x + y;
+	}
+
+}

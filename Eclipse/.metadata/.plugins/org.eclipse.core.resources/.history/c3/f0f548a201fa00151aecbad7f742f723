@@ -1,0 +1,14 @@
+package Minions;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Minions {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

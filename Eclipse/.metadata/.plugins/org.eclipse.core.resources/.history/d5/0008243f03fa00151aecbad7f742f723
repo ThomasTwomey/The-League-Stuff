@@ -1,0 +1,11 @@
+package ArrayListQuiz;
+
+import java.util.ArrayList;
+
+public class LearningArrayLists {
+
+	public static void createArrayList() {
+		ArrayList testList = new ArrayList();
+		testList.add("Hello");
+	}
+}
