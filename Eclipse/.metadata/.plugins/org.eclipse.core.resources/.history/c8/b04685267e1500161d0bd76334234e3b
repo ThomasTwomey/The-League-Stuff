@@ -1,0 +1,23 @@
+package HashMapPractice;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class HashMapPractice {
+
+	JFrame frame;
+	JPanel panel;
+
+	public static void main(String[] args) {
+		new HashMapPractice();
+	}
+
+	HashMapPractice() {
+		frame = new JFrame("Name and ID");
+		panel = new JPanel();
+		
+		frame.setSize(400, 300);
+		frame.setVisible(true);
+	}
+
+}

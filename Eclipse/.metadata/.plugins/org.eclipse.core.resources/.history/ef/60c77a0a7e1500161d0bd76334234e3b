@@ -1,0 +1,22 @@
+package HashMapPractice;
+
+import java.awt.Frame;
+import java.awt.Panel;
+
+import javax.swing.JFrame;
+
+public class HashMapPractice {
+
+	Frame frame;
+	Panel panel;
+	
+	public static void main(String[] args) {
+		new HashMapPractice();
+	}
+	
+	HashMapPractice(){
+		frame = new JFrame("Name and ID");
+		panel = new JPanel();
+	}
+
+}
