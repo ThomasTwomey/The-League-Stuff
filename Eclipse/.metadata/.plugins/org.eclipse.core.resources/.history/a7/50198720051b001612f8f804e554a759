@@ -1,0 +1,14 @@
+package Oncogene;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Oncogene {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

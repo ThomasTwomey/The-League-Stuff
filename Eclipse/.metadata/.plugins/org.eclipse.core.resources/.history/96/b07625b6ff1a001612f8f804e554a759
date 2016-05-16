@@ -1,0 +1,14 @@
+package MoreAndMoreTests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MultiTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

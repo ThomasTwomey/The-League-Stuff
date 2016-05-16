@@ -66,7 +66,6 @@ class AnimalHipster {
 			tempFriends.clear();
 			friendsAnimals.clear();
 		}
-		System.out.println(hipsters);
 		return hipsters;
 	}
 }
