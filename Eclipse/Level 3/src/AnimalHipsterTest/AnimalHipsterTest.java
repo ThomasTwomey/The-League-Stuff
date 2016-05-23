@@ -51,21 +51,21 @@ class AnimalHipster {
 			HashMap<String, ArrayList<String>> network,
 			HashMap<String, String> favoriteAnimals) {
 		ArrayList<String> friendsAnimals = new ArrayList<String>();
-		ArrayList<String> tempFriends = new ArrayList<String>();
+		// ArrayList<String> tempFriends = new ArrayList<String>();
 		ArrayList<String> hipsters = new ArrayList<String>();
-		for (String s : network.keySet()) {
-			for (String t : network.get(s)) {
-				tempFriends.add(t);
+		for (String s : favoriteAnimals.keySet()) {
+			for (ArrayList<String> arrayList : network.values()) {
+				for (String t : arrayList) {
+					friendsAnimals.add(favoriteAnimals.get(t));
+				}
 			}
-			for (String t : tempFriends) {
-				friendsAnimals.add(favoriteAnimals.get(t));
-			}
-			if (!tempFriends.contains(favoriteAnimals.get(s))) {
+			System.out.println(friendsAnimals);
+			if (!friendsAnimals.contains(favoriteAnimals.get(s))) {
 				hipsters.add(s);
 			}
-			tempFriends.clear();
-			friendsAnimals.clear();
+			friendsAnimals = new ArrayList<String>();
 		}
+		System.out.println(hipsters);
 		return hipsters;
 	}
 }
