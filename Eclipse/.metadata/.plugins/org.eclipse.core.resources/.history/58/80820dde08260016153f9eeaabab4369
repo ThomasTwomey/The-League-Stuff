@@ -1,0 +1,11 @@
+package RangeFinder;
+
+import java.util.Scanner;
+
+public class RangeFinder {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+	}
+
+}

@@ -1,0 +1,14 @@
+package RangeFinder;
+
+import java.util.Scanner;
+
+public class RangeFinder {
+int highest = 0;
+int lowest = 0;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		while (!scanner.equals(0));
+		
+	}
+
+}
