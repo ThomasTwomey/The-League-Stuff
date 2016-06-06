@@ -1,0 +1,11 @@
+package OpticalIllusion;
+
+public class OpticalIllusion {
+	public static void main(String[] args) {
+		new OpticalIllusion();
+	}
+	
+	OpticalIllusion(){
+		
+	}
+}

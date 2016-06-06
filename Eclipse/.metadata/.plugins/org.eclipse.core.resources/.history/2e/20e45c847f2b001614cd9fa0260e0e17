@@ -1,0 +1,13 @@
+package RangeFinder;
+
+import java.util.Scanner;
+
+public class RangeFinder {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		String s = "";
+		while(!s.equals("0")){
+			s = keyboard.next();
+		}
+	}
+}
