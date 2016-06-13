@@ -1,0 +1,169 @@
+package WordScramble;
+
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+public class WordScramble implements ActionListener {
+	JFrame frame;
+	JPanel panel;
+	JButton add;
+	JButton view;
+	JButton play;
+	ArrayList<String> wordList = new ArrayList<String>();
+
+	public static void main(String[] args) {
+		new WordScramble();
+	}
+
+	WordScramble() {
+		frame = new JFrame("Word Scramble");
+		panel = new JPanel();
+		panel.setLayout(new GridLayout(3, 1));
+		add = new JButton("Add");
+		view = new JButton("View");
+		play = new JButton("Play");
+
+		add.addActionListener(this);
+		view.addActionListener(this);
+		play.addActionListener(this);
+
+		panel.add(add);
+		panel.add(view);
+		panel.add(play);
+
+		frame.add(panel);
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(400, 350);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		frame.setLocation(dim.width / 2 - frame.getSize().width / 2,
+				dim.height / 2 - frame.getSize().height / 2);
+		frame.setVisible(true);
+	}
+
+	public void addWord() {
+		JFrame Aframe = new JFrame("Add Word");
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(2, 1));
+		JButton add = new JButton("Add Word");
+		JTextField input = new JTextField("");
+
+		input.setHorizontalAlignment(SwingConstants.CENTER);
+		add.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				wordList.add(input.getText());
+				input.setText("");
+			}
+		});
+
+		panel.add(input);
+		panel.add(add);
+
+		Aframe.add(panel);
+		Aframe.setSize(400, 250);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		Aframe.setLocation(dim.width / 2 - Aframe.getSize().width / 2,
+				dim.height / 2 - Aframe.getSize().height / 2);
+		Aframe.setVisible(true);
+	}
+
+	public void viewWords() {
+		JFrame Aframe = new JFrame("View Words");
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(1, 1));
+		JTextField input = new JTextField();
+
+		input.setHorizontalAlignment(SwingConstants.CENTER);
+		input.setText(wordList.toString());
+		input.setEditable(false);
+
+		panel.add(input);
+
+		Aframe.add(panel);
+		Aframe.setSize(400, 250);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		Aframe.setLocation(dim.width / 2 - Aframe.getSize().width / 2,
+				dim.height / 2 - Aframe.getSize().height / 2);
+		Aframe.setVisible(true);
+	}
+
+	public void playGame() {
+		JFrame Aframe = new JFrame("Play Game");
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(3, 1));
+		JLabel scrambledWord = new JLabel();
+		JTextField input = new JTextField();
+		JButton check = new JButton("Check Word");
+
+		input.setHorizontalAlignment(SwingConstants.CENTER);
+		scrambledWord.setHorizontalAlignment(SwingConstants.CENTER);
+
+		int rand = new Random().nextInt(wordList.size() - 1);
+		String word = wordList.get(rand);
+		scrambledWord.setText(scrambleWord(word));
+
+		check.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (word.equals(input.getText())) {
+					JOptionPane.showMessageDialog(frame, "You win!");
+					System.exit(0);
+				} else {
+					JOptionPane.showMessageDialog(frame, "You lose!");
+					System.exit(0);
+				}
+			}
+		});
+
+		panel.add(scrambledWord);
+		panel.add(input);
+		panel.add(check);
+
+		Aframe.add(panel);
+		Aframe.setSize(400, 250);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		Aframe.setLocation(dim.width / 2 - Aframe.getSize().width / 2,
+				dim.height / 2 - Aframe.getSize().height / 2);
+		Aframe.setVisible(true);
+	}
+
+	public String scrambleWord(String string) {
+		List<Character> characters = new ArrayList<Character>();
+		for (char c : string.toCharArray()) {
+			characters.add(c);
+		}
+		StringBuilder output = new StringBuilder(string.length());
+		while (characters.size() != 0) {
+			int randPicker = (int) (Math.random() * characters.size());
+			output.append(characters.remove(randPicker));
+		}
+		String scrambled = output.toString();
+		return scrambled;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == add) {
+			addWord();
+		} else if (e.getSource() == view) {
+			viewWords();
+		} else if (e.getSource() == play) {
+			playGame();
+		}
+
+	}
+
+}
